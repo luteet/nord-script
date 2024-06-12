@@ -1,0 +1,253 @@
+@use 'sass:math';
+
+.workflow {
+
+	padding-top: 3.8125rem; padding-bottom: 6.25rem;
+	@include _768 {
+		padding-top: 5.625rem; padding-bottom: 6.25rem;
+	}
+
+	z-index: auto;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: max(var(--container-padding), calc(50% - #{math.div($container, 2)}rem)); top: 0;
+		width: 0.125rem; height: 2.8125rem;
+		transform: translate(100%,0);
+		background: var(--accent);
+
+		@include _992 {
+			height: 3.75rem;
+		}
+	}
+
+	// .workflow__background
+
+	&__background {
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+		z-index: -1;
+
+		img {
+			width: 100%; height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	// .workflow__title
+
+	&__title {
+	}
+
+	// .workflow__slider
+
+	&__slider {
+
+		margin-top: 3.8125rem;
+		padding-right: 1rem;
+
+		@include _768 {
+			margin-top: 2.625rem;
+			padding-right: 3.75rem;
+		}
+
+		counter-reset: number;
+	}
+
+	&__icon {
+		position: absolute;
+		right: 0; top: -1.25rem;
+
+		user-select: none; pointer-events: none;
+		opacity: .5;
+
+		img {
+			width: 2.8125rem; height: 2.8125rem;
+			transform: translate(0,-100%);
+		}
+
+		@include _768 {
+			display: none;
+		}
+	}
+
+	// .workflow__track
+
+	&__track {
+		&.splide__track {
+			overflow: visible;
+			@include _768 {
+				overflow: hidden;
+			}
+		}
+	}
+
+	// .workflow__list
+
+	&__list {
+	}
+
+	// .workflow__card
+
+	&__card {
+	}
+
+	// .workflow__pagination
+
+	&__pagination {
+		bottom: auto; top: calc(100% + 1rem);
+
+		display: flex;
+		gap: 0.625rem;
+		
+		.splide__pagination__page {
+			margin: 0;
+			width: 0.375rem; height: 0.375rem;
+
+			@include _768 {
+				width: 2.5rem; height: 1.25rem;
+				border-radius: 0;
+			}
+
+			background: transparent;
+
+			opacity: 1;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0; top: 50%;
+				transform: translate(0,-50%);
+				width: 0.375rem; height: 0.375rem;
+				border-radius: 50%;
+				background: rgba(255,255,255,0.3);
+				transition: background .2s;
+				@include _768 {
+					border-radius: 0;
+					width: 100%; height: 0.125rem;
+					background: var(--white);
+				}
+			}
+		}
+
+		.splide__pagination__page.is-active {
+			transform: none;
+			&::before {
+				background: var(--accent);
+			}
+		}
+	}
+
+	// .workflow__arrow
+
+	&__arrow {
+		display: none;
+		@include _768 {
+			display: block;
+
+			position: absolute;
+			right: 0; top: 50%;
+			transform: translate(0,-50%);
+
+			background: transparent;
+
+			display: grid;
+			color: var(--white);
+
+			&.to-back svg {
+				transform: scaleX(-1);
+			}
+
+			svg {
+				width: 1.25rem; height: 2.5rem;
+				transition: transform .2s, color .2s;
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--accent);
+				}
+			
+				&:active {
+					color: var(--accent-active);
+				}
+			}
+		}
+	}
+}
+
+.workflow-card {
+
+	background: var(--white);
+	padding: 1.8125rem 1.5rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+	&::before {
+		counter-increment: number;
+		content: counter(number);
+
+		position: absolute;
+		right: 0; top: 0;
+		text-align: start;
+	
+		font-weight: 900;
+		font-size: 10rem;
+		line-height: 100%;
+
+		min-width: 6rem;
+
+		color: #EFEFEF;
+	}
+	
+
+	// .workflow-card__icon
+
+	&__icon {
+		width: 2.5rem; height: 2.5rem;
+
+		position: relative;
+		z-index: 2;
+	}
+
+	// .workflow-card__title
+
+	&__title {
+		padding-top: 1.375rem; padding-bottom: 0.8125rem;
+		position: relative;
+		z-index: 2;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0; bottom: 0;
+			width: 1.875rem; height: var(--border-size);
+			background: var(--accent);
+		}
+
+		font-weight: 600;
+		font-size: 1.375rem;
+		line-height: 122.727273%;
+
+		color: #000000;
+	}
+
+	// .workflow-card__about
+
+	&__about {
+		position: relative;
+		z-index: 2;
+		padding-top: 2rem;
+
+		font-weight: 500;
+		font-size: 1.125rem;
+		line-height: 122.222222%;
+		text-transform: uppercase;
+
+		color: rgba(0, 2, 4, 0.7);
+	}
+}

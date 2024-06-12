@@ -1,0 +1,113 @@
+
+@font-face {
+	@include font-include('Qanelas', 300, swap, normal, 'Qanelas-Light');
+}
+
+@font-face {
+	@include font-include('Qanelas', 400, swap, normal, 'Qanelas-Regular');
+}
+
+@font-face {
+	@include font-include('Qanelas', 500, swap, normal, 'Qanelas-Medium');
+}
+
+@font-face {
+	@include font-include('Qanelas', 600, swap, normal, 'Qanelas-SemiBold');
+}
+
+@font-face {
+	@include font-include('Qanelas', 700, swap, normal, 'Qanelas-Bold');
+}
+
+@font-face {
+	@include font-include('Qanelas', 800, swap, normal, 'Qanelas-ExtraBold');
+}
+
+@font-face {
+	@include font-include('Qanelas', 900, swap, normal, 'Qanelas-Black');
+}
+
+.main-title {
+	font-family: var(--title-font);
+	font-weight: 700;
+	line-height: 115%;
+
+	font-size: 1.875rem;
+
+	@include _768 {
+		font-size: 2.5rem;
+	}
+
+	@include _992 {
+		font-size: 3.125rem;
+	}
+}
+
+.accent-content {
+	border-left: 0.125rem solid var(--accent);
+	padding-left: 1.1875rem;
+
+	@include _550 {
+		padding-left: 1.4375rem;
+	}
+}
+
+.title {
+	
+	font-family: var(--title-font);
+	font-weight: 400;
+	font-size: 1.625rem;
+	line-height: 118.421053%;
+	color: var(--white);
+
+	em {
+		font-weight: 800;
+		line-height: 126.315789%;
+		font-style: normal;
+	}
+
+	@include _550 {
+		font-size: 2rem;
+	}
+
+	@include _992 {
+		font-size: 2.375rem;
+	}
+
+}
+
+.text {
+
+	padding-top: 0.875rem;
+
+	@include _550 {
+		font-size: 1rem;
+		padding-top: 23px;
+	}
+
+	@include _992 {
+		font-size: 1.125rem;
+	}
+
+	font-size: 0.875rem;
+	line-height: 138.888889%;
+
+	max-width: 35.4375rem;
+
+	color: rgba(255, 255, 255, 0.5);
+
+	p:not(:first-child) {
+		padding-top: 0.9375rem;
+	}
+}
+
+.section-title {
+
+	font-family: var(--title-font);
+	font-weight: 700;
+
+}
+
+.txt-center {
+	text-align: center;
+}

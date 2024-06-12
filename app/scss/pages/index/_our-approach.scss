@@ -1,0 +1,161 @@
+.our-approach {
+
+	padding-top: 4rem;
+	overflow: hidden;
+
+	display: grid;
+	@include _992 {
+		grid-template-columns: 1.35fr 1fr 2.5fr;
+
+		padding-top: 0;
+	}
+
+	// .our-approach__col
+
+	&__col {
+		position: relative;
+		@include _992 {
+			min-height: 100vh;
+
+			&:first-child {
+				padding-top: 5.25rem;
+			}
+		}
+
+		
+	}
+
+	// .our-approach__hero
+
+	&__hero {
+		padding-right: 1.875rem;
+	}
+
+	// .our-approach__title
+
+	&__title {
+	}
+
+	// .our-approach__gallery
+
+	&__gallery {
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%;
+
+		display: none;
+		flex-direction: column;
+
+		@include _992 {
+			display: flex;
+		}
+	}
+
+	// .our-approach__gallery-item
+
+	&__gallery-item {
+		height: 33.333vh; flex: 0 0 calc(33.333vh - var(--fixed-header-height,60px) / 3);
+		position: relative;
+
+		img {
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+			object-fit: cover;
+
+			background: var(--secondary);
+		}
+	}
+
+	// .our-approach__item
+
+	&__item {
+		@include _992 {
+			min-height: 100vh;
+		}
+	}
+}
+
+.our-approach-item {
+
+	padding-bottom: 0.625rem;
+	
+	@include _992 {
+		padding-bottom: 0;
+	}
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	&__content {
+		padding: 1.875rem 1.5rem 2.3125rem;
+		@include _992 {
+			padding: 1.875rem 1rem 1.875rem 3.75rem;
+		}
+	}
+
+	// .our-approach-item__icon
+
+	&__icon {
+		width: 2.1875rem; height: 2.1875rem;
+	}
+
+	// .our-approach-item__title
+
+	&__title {
+		padding-top: 1.1875rem;
+
+		font-weight: 600;
+		font-size: 1.0625rem;
+		line-height: 120.833333%;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+
+		@include _550 {
+			font-size: 1.35rem;
+		}
+		
+		@include _992 {
+			font-size: 1.5rem;
+		}
+	}
+
+	// .our-approach-item__subtitle
+
+	&__subtitle {
+		padding-top: 1.1875rem; padding-bottom: 1rem;
+		position: relative;
+
+		font-size: 1rem;
+		line-height: 120.833333%;
+
+		@include _550 {
+			font-size: 1.25rem;
+			padding-bottom: 1.625rem;
+		}
+		
+		@include _992 {
+			font-size: 1.5rem;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0; bottom: 0;
+			width: 2.5rem; height: 0.125rem;
+			background: var(--accent);
+		}
+	}
+
+	// .our-approach-item__text
+
+	&__text {
+	}
+
+	&__image {
+		img {
+			background: var(--secondary);
+		}
+	}
+}

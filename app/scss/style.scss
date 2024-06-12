@@ -1,0 +1,28 @@
+@import 'mixin';
+@import 'vars';
+@import 'libs';
+@import 'null';
+@import 'global';
+@import 'font';
+@import 'form';
+
+@import 'components/popup';
+@import 'components/button';
+@import 'components/header';
+@import 'components/breadcrumbs';
+
+@import 'pages/index/hero';
+@import 'pages/index/our-clients';
+@import 'pages/index/goal';
+@import 'pages/index/our-approach';
+@import 'pages/index/benefits';
+@import 'pages/index/feedback-section';
+@import 'pages/index/about';
+@import 'pages/index/workflow';
+@import 'pages/index/determine-cost';
+
+@import 'pages/text-page/main';
+
+@import 'pages/thanks/main';
+
+@import 'components/footer';

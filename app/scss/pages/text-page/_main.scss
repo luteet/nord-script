@@ -1,0 +1,108 @@
+.text-page {
+
+	color: var(--black);
+	margin-top: 1.75rem;
+	@include _992 {
+		margin-top: 3.625rem;
+	}
+
+	&__inner {
+		padding: 1.4375rem 1.25rem 1.625rem;
+		background: var(--white);
+
+		@include _992 {
+			padding: 3.375rem;
+		}
+
+		> ul {
+			padding-top: 0.6875rem; padding-left: 1.25rem;
+			list-style-type: disc;
+
+			@include _992 {
+				padding-top: 20px;
+			}
+
+			line-height: 118.75%;
+			color: rgba(0, 0, 0, 0.65);
+
+			> li {
+				list-style-type: disc;
+				&::marker {
+					font-size: 0.625rem;
+				}
+
+				> ul {
+					list-style-type: circle;
+					padding-top: 0.25rem; padding-left: 1.25rem;
+					li {
+						list-style-type: circle;
+					}
+				}
+			}
+		}
+	}
+
+	h1 {
+		font-weight: 600;
+		font-size: 1.625rem;
+		line-height: 111%;
+
+		@include _992 {
+			font-size: 2.375rem;
+		}
+	}
+
+	time {
+		display: block;
+		padding-top: 0.5625rem;
+
+		font-weight: 600;
+		font-size: 0.875rem;
+		line-height: 107.1%;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: underline;
+		text-underline-offset: 0.3ch;
+		text-decoration-color: rgba(0, 0, 0, 0.65);
+
+		@media (any-hover: hover) {
+
+			transition: color .15s, text-decoration-color .15s;
+
+			&:hover {
+				color: var(--accent);
+				text-decoration-color: var(--accent);
+			}
+		
+			&:active {
+				color: var(--accent-active);
+				text-decoration-color: var(--accent-active);
+			}
+		}
+	}
+
+	p {
+		padding-top: 1.25rem;
+
+		line-height: 118.75%;
+		color: rgba(0, 0, 0, 0.65);
+	}
+
+	h2 {
+		padding-top: 1.4375rem;
+
+		font-weight: 600;
+		font-size: 0.8125rem;
+		line-height: 121.428571%;
+		text-transform: uppercase;
+
+		@include _992 {
+			font-size: 0.875rem;
+			padding-top: 2.375rem;
+		}
+	}
+
+	
+}
