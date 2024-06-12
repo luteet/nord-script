@@ -95,6 +95,8 @@
 		transform: translate(-50%,-50%);
 		width: 2.8125rem; height: 3.125rem;
 
+		user-select: none; pointer-events: none;
+
 		@include _992 {
 			left: 0; top: 50%; right: auto;
 			transform: translate(-50%,-50%);

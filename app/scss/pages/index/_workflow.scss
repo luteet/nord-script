@@ -176,6 +176,18 @@
 			}
 		}
 	}
+
+	&__arrow-wrapper {
+		position: absolute;
+		right: 0; top: 50%;
+		transform: translate(0,-50%);
+
+		display: none;
+
+		@include _768 {
+			display: block;
+		}
+	}
 }
 
 .workflow-card {

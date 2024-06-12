@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
 .header {
 	position: fixed;
 	left: 0; top: 0;
@@ -47,13 +56,14 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 		align-items: center;
+
+		opacity: 0;
+		animation: fadeIn 0.3s ease 0.05s 1 normal forwards;
 	}
 
 	perspective: 400px;
 
 	padding-top: 1.25rem; padding-bottom: 1.25rem;
-
-	
 
 	// .header__title
 
@@ -92,7 +102,7 @@
 
 		color: rgba(255, 255, 255, 0.7);
 
-		border-left: var(--border-size) solid var(--accent);
+		border-left: 0.125rem solid var(--accent);
 
 		@media (max-width: 991px) {
 			position: absolute;

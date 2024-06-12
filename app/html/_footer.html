@@ -94,74 +94,78 @@
 						</div>
 						<form class="feedback-popup__form">
 							<fieldset class="feedback-popup__fieldset">
-								<label class="feedback-popup__label">
-									<input type="text" class="feedback-popup__input" name="name" placeholder="Name" required>
-								</label>
-								<label class="feedback-popup__label">
-									<input type="text" class="feedback-popup__input" name="company" placeholder="Company" required>
-								</label>
-								<label class="feedback-popup__label">
-									<input type="email" class="feedback-popup__input" name="email" placeholder="Email" required>
-								</label>
-								<label class="feedback-popup__label">
-									<input type="tel" class="feedback-popup__input" name="Phone" placeholder="Phone" required>
-								</label>
+								<div class="feedback-popup__fieldset-grid">
+									<label class="feedback-popup__label">
+										<input type="text" class="feedback-popup__input" name="name" placeholder="Name" required>
+									</label>
+									<label class="feedback-popup__label">
+										<input type="text" class="feedback-popup__input" name="company" placeholder="Company" required>
+									</label>
+									<label class="feedback-popup__label">
+										<input type="email" class="feedback-popup__input" name="email" placeholder="Email" required>
+									</label>
+									<label class="feedback-popup__label">
+										<input type="tel" class="feedback-popup__input" name="Phone" placeholder="Phone" required>
+									</label>
+								</div>
 							</fieldset>
 							<fieldset class="feedback-popup__fieldset large-gap">
 								<legend>
 									Select your preferred communication method:
 								</legend>
-								<div class="feedback-popup__communication">
-									<label class="feedback-popup__communication-checkbox">
-										<input type="checkbox" name="communication-phone">
-										<span>
-											<svg width="14" height="14">
-												<use href="img/sprites.svg#check"></use>
-											</svg>
-										</span>
-										<span>
-											Phone
-										</span>
-									</label>
-									<span><input type="text" class="feedback-popup__communication-input" name="communication-phone-link" placeholder="Phone"></span>
-								</div>
-								<div class="feedback-popup__communication">
-									<label class="feedback-popup__communication-checkbox">
-										<input type="checkbox" name="communication-whatsapp">
-										<span>
-											<svg width="14" height="14">
-												<use href="img/sprites.svg#check"></use>
-											</svg>
-										</span>
-										<span>
-											WhatsApp
-										</span>
-									</label>
-									<span><input type="text" class="feedback-popup__communication-input" name="communication-whatsapp-link" placeholder="WhatsApp"></span>
-								</div>
-								<div class="feedback-popup__communication">
-									<label class="feedback-popup__communication-checkbox">
-										<input type="checkbox" name="communication-telegram">
-										<span>
-											<svg width="14" height="14">
-												<use href="img/sprites.svg#check"></use>
-											</svg>
-										</span>
-										<span>Telegram</span>
-									</label>
-									<span><input type="text" class="feedback-popup__communication-input" name="communication-telegram-link" placeholder="Telegram"></span>
-								</div>
-								<div class="feedback-popup__communication">
-									<label class="feedback-popup__communication-checkbox">
-										<input type="checkbox" name="communication-viber">
-										<span>
-											<svg width="14" height="14">
-												<use href="img/sprites.svg#check"></use>
-											</svg>
-										</span>
-										<span>Viber</span>
-									</label>
-									<span><input type="text" class="feedback-popup__communication-input" name="communication-viber-link" placeholder="Viber"></span>
+								<div class="feedback-popup__fieldset-grid">
+									<div class="feedback-popup__communication">
+										<label class="feedback-popup__communication-checkbox">
+											<input type="checkbox" name="communication-phone">
+											<span>
+												<svg width="14" height="14">
+													<use href="img/sprites.svg#check"></use>
+												</svg>
+											</span>
+											<span>
+												Phone
+											</span>
+										</label>
+										<span><input type="text" class="feedback-popup__communication-input" name="communication-phone-link" placeholder="Phone"></span>
+									</div>
+									<div class="feedback-popup__communication">
+										<label class="feedback-popup__communication-checkbox">
+											<input type="checkbox" name="communication-whatsapp">
+											<span>
+												<svg width="14" height="14">
+													<use href="img/sprites.svg#check"></use>
+												</svg>
+											</span>
+											<span>
+												WhatsApp
+											</span>
+										</label>
+										<span><input type="text" class="feedback-popup__communication-input" name="communication-whatsapp-link" placeholder="WhatsApp"></span>
+									</div>
+									<div class="feedback-popup__communication">
+										<label class="feedback-popup__communication-checkbox">
+											<input type="checkbox" name="communication-telegram">
+											<span>
+												<svg width="14" height="14">
+													<use href="img/sprites.svg#check"></use>
+												</svg>
+											</span>
+											<span>Telegram</span>
+										</label>
+										<span><input type="text" class="feedback-popup__communication-input" name="communication-telegram-link" placeholder="Telegram"></span>
+									</div>
+									<div class="feedback-popup__communication">
+										<label class="feedback-popup__communication-checkbox">
+											<input type="checkbox" name="communication-viber">
+											<span>
+												<svg width="14" height="14">
+													<use href="img/sprites.svg#check"></use>
+												</svg>
+											</span>
+											<span>Viber</span>
+										</label>
+										<span><input type="text" class="feedback-popup__communication-input" name="communication-viber-link" placeholder="Viber"></span>
+									</div>
 								</div>
 							</fieldset>
 							<button class="feedback-popup__submit button" type="submit">
@@ -171,9 +175,9 @@
 					</div>
 					<div class="feedback-popup__image">
 						<picture>
-							<source srcset="img/feedback-popup/feedback-popup-image.avif" type="image/avif">
-							<source srcset="img/feedback-popup/feedback-popup-image.webp" type="image/webp">
-							<img src="img/feedback-popup/feedback-popup-image.jpg" alt="" width="300" height="640" loading="lazy">
+							<source data-srcset="img/feedback-popup/feedback-popup-image.avif" type="image/avif">
+							<source data-srcset="img/feedback-popup/feedback-popup-image.webp" type="image/webp">
+							<img data-src="img/feedback-popup/feedback-popup-image.jpg" alt="" width="300" height="640" class="lazy">
 						</picture>
 					</div>
 				</div>

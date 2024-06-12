@@ -156,12 +156,21 @@ document.querySelector(".feedback-popup__form").addEventListener("submit", (even
 	event.preventDefault();
 })
 
-/* 
+
+// =-=-=-=-=-=-=-=-=-=-=-=- <loading-lazy> -=-=-=-=-=-=-=-=-=-=-=-=
+
+new LazyLoad();
+
+// =-=-=-=-=-=-=-=-=-=-=-=- </loading-lazy> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
 // =-=-=-=-=-=-=-=-=-=-=-=- <animation> -=-=-=-=-=-=-=-=-=-=-=-=
 
 AOS.init({
 	disable: "mobile",
+	once: true,
 });
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </animation> -=-=-=-=-=-=-=-=-=-=-=-=
-*/
+

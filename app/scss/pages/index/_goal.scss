@@ -223,7 +223,7 @@
 			background: var(--accent);
 
 			@include _992 {
-				height: 4.0625rem;
+				height: 3.4375rem;
 				bottom: 0; top: auto;
 			}
 		}
@@ -236,10 +236,12 @@
 
 		font-size: 0.875rem;
 		line-height: 125%;
+		color: #000204;
 
 		@include _992 {
 			padding-top: 0;
-			font-size: 1rem;
+			font-size: 1.125rem;
+			line-height: 144.444444%;
 		}
 	}
 }

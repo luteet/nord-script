@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
+    "aos": "^2.3.4",
     "swiper": "^11.1.4",
     "vanilla-lazyload": "^19.1.3"
   }

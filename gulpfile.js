@@ -95,8 +95,9 @@ function scriptsLib() {
 		'node_modules/vanilla-lazyload/dist/lazyload.min.js', // Lazyload img | npm i vanilla-lazyload --save | https://www.npmjs.com/package/vanilla-lazyload
 		'node_modules/gsap/dist/gsap.min.js', // GSAP (Animation) | npm i gsap --save | https://www.npmjs.com/package/gsap
 		'node_modules/gsap/dist/ScrollTrigger.min.js', // GSAP (Animation) | npm i gsap --save | https://www.npmjs.com/package/gsap
-		//'node_modules/swiper/swiper-bundle.min.js', // Слайдер
-		'node_modules/@splidejs/splide/dist/js/splide.min.js', // Слайдер | npm i @splidejs/splide --save | https://splidejs.com/guides/getting-started/
+		//'node_modules/swiper/swiper-bundle.min.js', // Swiper
+		'node_modules/@splidejs/splide/dist/js/splide.min.js', // Splide | npm i @splidejs/splide --save | https://splidejs.com/guides/getting-started/
+		'node_modules/aos/dist/aos.js', // Animation | npm i aos --save | https://www.npmjs.com/package/aos
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
@@ -155,7 +156,8 @@ function stylesLib() {
 	return src([
 		'node_modules/normalize.css/normalize.css',
 		//'node_modules/swiper/swiper-bundle.min.css', // Swiper
-		'node_modules/@splidejs/splide/dist/css/splide.min.css', // Слайдер
+		'node_modules/@splidejs/splide/dist/css/splide.min.css', // Splide
+		'node_modules/aos/dist/aos.css', // Animations
 	])
 	.pipe(concat('_libs.scss'))
 	.pipe(dest('app/scss'))

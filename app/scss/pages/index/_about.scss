@@ -139,6 +139,14 @@
 
 		color: var(--white);
 
+		&::before {
+			content: "";
+			position: absolute;
+			left: 50%; top: 50%;
+			transform: translate(-50%,-50%);
+			width: 2.8125rem; height: 2.8125rem;
+		}
+
 		@media (any-hover: hover) {
 
 			transition: color .2s;
